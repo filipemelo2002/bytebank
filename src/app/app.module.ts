@@ -8,11 +8,12 @@ import { ExtratoComponent } from './extrato/extrato.component';
 import { NewTransferComponent } from './new-transfer/new-transfer.component';
 
 import localePT from '@angular/common/locales/pt';
+import { HttpClientModule } from '@angular/common/http';
 
 registerLocaleData(localePT, 'pt');
 @NgModule({
   declarations: [AppComponent, NewTransferComponent, ExtratoComponent],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },
     { provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL' },
